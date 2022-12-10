@@ -12,5 +12,6 @@ public class Farm_animal extends Animal implements Edible {
         System.out.println("Smacznego");
         return false;
     }
+
 }
 

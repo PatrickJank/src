@@ -1,6 +1,8 @@
 package creatures;
 
-public abstract class Animal {
+import interfaces.Sellable;
+
+public abstract class Animal implements Sellable {
 
     final public String species;
     public Double weight;
@@ -8,6 +10,22 @@ public abstract class Animal {
     public final boolean DEFAULT_RUN = false;
 
     public String name;
+
+
+    public void sell(Human Seller, Human Buyer, Double Price) {
+if (Buyer.Cash < Price){
+    System.out.println("Too poor");
+}
+else
+{
+    Buyer.Cash-=Price;
+    Seller.Cash+=Price;
+    Buyer.pet = Seller.pet;
+    Seller.pet = null;
+    System.out.println("Tranzakcja udana!");
+}
+    }
+
 public Human owner;
 public Boolean isOwned;
     Boolean isAlive = true;

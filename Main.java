@@ -97,5 +97,6 @@ public class Main {
         me.pet.TakeForAWalk(5.0);
         me.pet.TakeForAWalk(1.0,true);
 
+        me.pet.sell(me,friend,10.0);
     }
     }

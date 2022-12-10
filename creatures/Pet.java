@@ -2,8 +2,9 @@ package creatures;
 
 import creatures.Animal;
 import interfaces.Feedable;
+import interfaces.Sellable;
 
-public class Pet extends Animal implements Feedable {
+public class Pet extends Animal implements Feedable, Sellable {
     public Pet(String x, Double weight, String name) {
         super(x, weight, name);
     }
@@ -20,4 +21,7 @@ public class Pet extends Animal implements Feedable {
     }
 
 
+    public void sell(Human Seller, Human Buyer, Double Price) {
+        System.out.println("PETS CANNOT BE SOLD");
+    }
 }

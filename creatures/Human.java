@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 //importing data libraries for the task 3/4.2
  public class Human extends Animal {
     public Pet pet;
+    public Double Cash;
     public String firstName;
     public String lastName;
 
@@ -72,6 +73,9 @@ import java.time.LocalDateTime;
     }
 
 
+    public void sell(Human Seller, Human Buyer, Human Price) {
+        System.out.println("POLICE");
+    }
 }
 
 
