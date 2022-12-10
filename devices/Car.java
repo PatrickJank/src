@@ -1,16 +1,19 @@
 package devices;
 
-public class Car extends Device {
+import java.nio.file.StandardWatchEventKinds;
+
+public abstract class Car extends Device{
  public Double weight;
  public Boolean airConditioner;
+ public Double tankStatus=50.0; //100%, 50% ETC.
  public Double price;
  public boolean IsAcquired = false;
 
- public Car(Double x, String model, String producer, int yearOfProduction)
+ public Car(Double price, String model, String producer, int yearOfProduction)
  {
   super(model, producer, yearOfProduction);
   this.IsAcquired=true;
-  this.price = x;
+  this.price = price;
  }
  public boolean check(Car object){
   return (this == object);
@@ -32,6 +35,8 @@ public class Car extends Device {
    return isTurnedOn;
   }
  }
+
+ abstract public void Refuel();
 }
 
 

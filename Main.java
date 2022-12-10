@@ -2,8 +2,8 @@ import creatures.Animal;
 import creatures.Farm_animal;
 import creatures.Human;
 import creatures.Pet;
-import devices.Car;
-import devices.Phone;
+import devices.*;
+
 import java.util.Scanner;
 
 public class Main {
@@ -58,11 +58,13 @@ public class Main {
                 }
             }
 
-        Car auto1 = new Car(5000.0, "Skoda", "Octavia", 2001);
+        DiselCar auto1 = new DiselCar(5000.0, "Skoda", "Octavia", 2001) {
+
+        };
         System.out.println(me.getPet());
         System.out.println(me.getAuto());
         me.setAuto(5000.0, auto1);
-        Car auto2 = new Car(6000.0, "Fiat", "Punto", 2010);
+        LPGCar auto2 = new LPGCar(6000.0, "Fiat", "Punto", 2010);
         friend.setAuto(6000.0,auto2);
         System.out.println(auto1.check(auto2));
         System.out.println(me.toStringN());
@@ -98,5 +100,8 @@ public class Main {
         me.pet.TakeForAWalk(1.0,true);
 
         me.pet.sell(me,friend,10.0);
+        ElectricCar tesla = new ElectricCar(10000.0,"Tesla","Tesla",2022);
+        auto1.Refuel();
+
     }
     }
