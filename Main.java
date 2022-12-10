@@ -96,5 +96,6 @@ public class Main {
         me.pet.TakeForAWalk();
         me.pet.TakeForAWalk(5.0);
         me.pet.TakeForAWalk(1.0,true);
+
     }
     }
