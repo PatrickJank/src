@@ -17,10 +17,11 @@ import java.time.LocalDateTime;
     public Phone phone;
 
     // dziedziczenie z klasy animal
-    public Human(String DEFAULT_HOMO_SAPIENS, int weight){
+    public Human(String DEFAULT_HOMO_SAPIENS, int weight, int salary){
         super(DEFAULT_HOMO_SAPIENS);
         this.salary = 0.0;
         this.garage = new Car[DEFAULT_GARAGE_SIZE];
+        Cash = this.salary;
     }
 public int test(int garageSize){
      this.DEFAULT_GARAGE_SIZE = garageSize;
@@ -75,10 +76,7 @@ public Car getCar(int parkingPlace){
         return value;
     }
 
-   // public Car getAuto()
-    {
-       // return auto;
-    }
+
 
     public void setAuto(Double Price, Car auto)
     {
@@ -106,6 +104,41 @@ public Car getCar(int parkingPlace){
 
     public void sell(Human Seller, Human Buyer, Human Price) {
         System.out.println("POLICE");
+    }
+
+    public boolean hasACar(Car car) {
+        Boolean hasACar = false;
+        for (int i = 0; i < garage.length; i++){
+            if(this.garage[i] == car){
+            }
+        }
+        return hasACar;
+    }
+
+    public boolean hasFreeSpace() {
+        for(Car car : garage){
+            if(car == null){
+                return true;
+                }
+            }
+            return false;
+        }
+
+    public void addCar(Car car) {
+        for(int i = 0; i < garage.length; i++){
+            if(garage[i] == null){
+                garage[i]= car;
+                return;
+            }
+        }
+    }
+
+    public void removeCar(Car car) {
+    }
+
+    @Override
+    public void sell(Human Seller, Human Buyer, Double Price) {
+
     }
 }
 

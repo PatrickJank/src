@@ -13,5 +13,9 @@ public class Farm_animal extends Animal implements Edible {
         return false;
     }
 
+    @Override
+    public void sell(Human Seller, Human Buyer, Double Price) {
+
+    }
 }
 

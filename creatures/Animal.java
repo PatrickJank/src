@@ -12,19 +12,7 @@ public abstract class Animal implements Sellable {
     public String name;
 
 
-    public void sell(Human Seller, Human Buyer, Double Price) {
-if (Buyer.Cash < Price){
-    System.out.println("Too poor");
-}
-else
-{
-    Buyer.Cash-=Price;
-    Seller.Cash+=Price;
-    Buyer.pet = Seller.pet;
-    Seller.pet = null;
-    System.out.println("Tranzakcja udana!");
-}
-    }
+
 
 public Human owner;
 public Boolean isOwned;

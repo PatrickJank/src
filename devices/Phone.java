@@ -52,8 +52,8 @@ public class Phone extends Device {
         return (model + " " + producer);
     }
 
-    public Phone(String model, String producer, int year){
-        super(model, producer, year);
+    public Phone(String model, String producer, int year, int value){
+        super(model, producer, year, value);
     }
     public boolean turnOn() {
         if (isTurnedOn == false){
