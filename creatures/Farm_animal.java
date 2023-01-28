@@ -3,7 +3,7 @@ import interfaces.Edible;
 
 public class Farm_animal extends Animal implements Edible {
     public Farm_animal(String x, Double weight, String name) {
-        super(x, weight, name);
+        super(x);
     }
 
     public boolean beEaten() {

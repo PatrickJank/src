@@ -6,6 +6,7 @@ public abstract class Car extends Device{
  public Double weight;
  public Boolean airConditioner;
  public Double tankStatus=50.0; //100%, 50% ETC.
+ public int parkingSlot;
  public Double price;
  public boolean IsAcquired = false;
 
@@ -37,7 +38,11 @@ public abstract class Car extends Device{
  }
 
  abstract public void Refuel();
+
+
 }
+
+
 
 
 

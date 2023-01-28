@@ -1,12 +1,11 @@
 package creatures;
 
-import creatures.Animal;
 import interfaces.Feedable;
 import interfaces.Sellable;
 
 public class Pet extends Animal implements Feedable, Sellable {
     public Pet(String x, Double weight, String name) {
-        super(x, weight, name);
+        super(x);
     }
 
     public double feed() {

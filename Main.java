@@ -1,4 +1,3 @@
-import creatures.Animal;
 import creatures.Farm_animal;
 import creatures.Human;
 import creatures.Pet;
@@ -10,7 +9,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Human me = new Human();
+        Human me = new Human("homo sapiens", 70);
         me.firstName = "Patrick";
         me.lastName = "Jankiewicz";
 
@@ -20,10 +19,10 @@ public class Main {
 
 
         //before feeding
-        System.out.println(cat.weight);
+        //System.out.println(cat.weight);
 
         //after feeding
-        System.out.println(cat.weight);
+        //System.out.println(cat.weight);
 
         //taking for a walk until weight = 0, uncomment to trigger
         /*
@@ -35,7 +34,7 @@ public class Main {
 
         //creating a new creatures.Human object, assigning previously created cat to the human
 
-        Human friend = new Human();
+        Human friend = new Human("homo sapiens", 80);
         me.firstName = "Roman";
         me.lastName = "Kowalski";
 
@@ -62,7 +61,7 @@ public class Main {
 
         };
         System.out.println(me.getPet());
-        System.out.println(me.getAuto());
+        //System.out.println(me.getAuto());
         me.setAuto(5000.0, auto1);
         LPGCar auto2 = new LPGCar(6000.0, "Fiat", "Punto", 2010);
         friend.setAuto(6000.0,auto2);
@@ -71,7 +70,7 @@ public class Main {
         System.out.println(me.pet.toStringP());
         System.out.println(auto1.toStringC());
 
-        me.Feed();
+        //me.Feed();
         Phone phone = new Phone("Sony", "Erikson", 2002);
         me.phone = phone;
         //change phone state
@@ -89,19 +88,43 @@ public class Main {
         Farm_animal cow = new Farm_animal("Cow",30.0, "Milka");
         System.out.println(cow);
 
-        System.out.println(cat.feed());
-        System.out.println(cat.feed(2.0));
-     me.pet.feed();
+        //System.out.println(cat.feed());
+        //System.out.println(cat.feed(2.0));
+     //me.pet.feed();
      System.out.println(me.pet.weight);
 
-     me.pet.TakeForAWalk();
-        me.pet.TakeForAWalk();
-        me.pet.TakeForAWalk(5.0);
-        me.pet.TakeForAWalk(1.0,true);
+     //me.pet.TakeForAWalk();
+       // me.pet.TakeForAWalk();
+        //me.pet.TakeForAWalk(5.0);
+        //me.pet.TakeForAWalk(1.0,true);
 
-        me.pet.sell(me,friend,10.0);
+        //me.pet.sell(me,friend,10.0);
         ElectricCar tesla = new ElectricCar(10000.0,"Tesla","Tesla",2022);
         auto1.Refuel();
+
+
+        String[] names;
+        Human[] people;
+
+        names = new String[3];
+        names[0] = "kacper";
+        names[1] = "karolina";
+
+        people = new Human[4];
+        people[0] = new Human("homo sapiens", 50);
+        people[1] = me;
+        me.garage[0] = new Car(3000.0, "Skoda", "Skoda", 2009) {
+
+            @Override
+            public void Refuel() {
+
+
+
+                me.setCar(tesla, 2);
+            }
+        };
+
+
 
     }
     }

@@ -29,7 +29,7 @@ else
 public Human owner;
 public Boolean isOwned;
     Boolean isAlive = true;
-public Animal(String species, Double weight, String name)
+public Animal(String species)
 {
     this.isAlive = true;
     this.isOwned = true;
@@ -69,6 +69,8 @@ public void TakeForAWalk(double Distance, boolean DoWeRun){
         System.out.println("You sick person, he is dead");
     }
 }
+
+/*
 public void Feed()
     {
         if(this.isAlive){
@@ -78,6 +80,7 @@ public void Feed()
    if(!this.isAlive)
         System.out.println("He's dead, why are you doing this?");
     }
+*/
 //
 //public void takeForAWalk()
 //    {

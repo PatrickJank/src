@@ -1,6 +1,5 @@
 package creatures;
 
-import creatures.Animal;
 import devices.Car;
 import devices.Phone;
 import java.time.format.DateTimeFormatter;
@@ -8,7 +7,9 @@ import java.time.LocalDateTime;
 
 //importing data libraries for the task 3/4.2
  public class Human extends Animal {
+    private static final String DEFAULT_HOMO_SAPIENS = "HOMO SAPIENS";
     public Pet pet;
+    private static int DEFAULT_GARAGE_SIZE = 3;
     public Double Cash;
     public String firstName;
     public String lastName;
@@ -16,14 +17,44 @@ import java.time.LocalDateTime;
     public Phone phone;
 
     // dziedziczenie z klasy animal
-    public Human(){
-        super("homo sapiens", 70.0, "Gal Anonim");
+    public Human(String DEFAULT_HOMO_SAPIENS, int weight){
+        super(DEFAULT_HOMO_SAPIENS);
         this.salary = 0.0;
+        this.garage = new Car[DEFAULT_GARAGE_SIZE];
     }
+public int test(int garageSize){
+     this.DEFAULT_GARAGE_SIZE = garageSize;
+     return DEFAULT_GARAGE_SIZE;
+}
+
+    public Car[] garage;
 
 
+public void setCar(Car car, int parkingPlace){
+    //sprawdzenie czy wolne miejsce
+    if((garage[parkingPlace])!=null){
+        System.out.println("Oi,stop that");
+    }
+    if((parkingPlace)<=0);{
+        System.out.println("Oi, stop that");
+    }
+    if((parkingPlace)< garage.length)
+    {
+        System.out.println("Oi, stop that");
+    }
+    this.garage[parkingPlace] = car;
+}
 
-    private Car auto;
+public Car getCar(int parkingPlace){
+    if((parkingPlace)<=0);{
+        System.out.println("Oi, stop that");
+    }
+    if((parkingPlace)< garage.length)
+    {
+        System.out.println("Oi, stop that");
+    }
+    return this.garage[parkingPlace];
+}
 
     private Double salary = 4500.0;
 
@@ -44,9 +75,9 @@ import java.time.LocalDateTime;
         return value;
     }
 
-    public Car getAuto()
+   // public Car getAuto()
     {
-        return auto;
+       // return auto;
     }
 
     public void setAuto(Double Price, Car auto)
